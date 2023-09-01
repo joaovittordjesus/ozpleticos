@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+    padding: 20%;
+    
+}
+
+h1{
+    color: white;
+}
+
+div{
+    text-align: center;
+}
+
+button{
+    height: 2.2em;
+    width: 5.5em;
+    border: none;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.start-btn{
+    border-radius: 5px;
+    background-color: green;
+}
+
+.pause-btn{
+    border-radius: 5px;
+    background-color: grey;
+}
+
+.stop-btn{
+    border-radius: 5px;
+    background-color: red;
+}
