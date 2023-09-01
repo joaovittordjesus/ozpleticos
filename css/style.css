@@ -12,20 +12,22 @@ button {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000000;
  }
 
  .lampada{
-    width: 400px;
+    /*width: 400px;
     height: 400px;
     text-align: center;
     border: solid 2px #000;
     border-radius: 10%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #fff;*/
     justify-content: center;
     margin-top: 100px;
  }
+
+
 
 button{
     width: 100px;
@@ -42,4 +44,11 @@ button{
 button:hover{
     background-color: #0056b3;
 }
+
+/* Adicione isso ao seu arquivo CSS para definir a classe "luminous" */
+.luminous {
+    filter: brightness(1.2); /* Aumenta o brilho da imagem em 20% */
+    transition: filter 0.3s; /* Adicione uma transição suave ao efeito */
+}
+
 

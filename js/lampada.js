@@ -11,32 +11,38 @@ function isLampBroken() {
 
 function lampOn() {
     if (!isLampBroken()) {
-        lamp.src = './img/ligada.jpg';
+        lamp.src = './img/ligada.png';
         contador += 1;
         checkClickLimit(); // Verifica o limite de cliques
+        lamp.classList.add('luminous'); // Adiciona a classe de efeito de luminosidade
     }
-}
+    }
+
 
 function lampOff() {
     if (!isLampBroken()) {
-        lamp.src = './img/desligada.jpg';
+        lamp.src = './img/desligada.png';
+        lamp.classList.remove('luminous'); // Remove a classe de efeito de luminosidade
     }
 }
 
 function lampBroken() {
-    lamp.src = './img/quebrada.jpg';
+    lamp.src = './img/quebrada.png';
+    lamp.classList.remove('luminous'); // Remove a classe de efeito de luminosidade
 }
 
 function trocaLamp() {
     if (isLampBroken()){
-        lamp.src = './img/desligada.jpg';
+        lamp.src = './img/desligada.png';
         contador = 0;
+        lamp.classList.remove('luminous'); // Remove a classe de efeito de luminosidade
     }
 }
 
 function checkClickLimit() {
     if (contador >= clickLimit) {
         lampBroken(); // Chama a função para quebrar a lâmpada
+        lamp.classList.remove('luminous'); // Remove a classe de efeito de luminosidade
 
     }
 }
