@@ -1,6 +1,7 @@
 const turnOn = document.getElementById('turnOn');
 const turnOff = document.getElementById('turnOff');
 const lamp = document.getElementById('lamp');
+const trocar = document.getElementById('trocar');
 const clickLimit = 5; // Defina o número limite de cliques desejado
 let contador = 0;
 
@@ -26,18 +27,23 @@ function lampBroken() {
     lamp.src = './img/quebrada.jpg';
 }
 
-trocaLamp() {
-    lamp.src = '.img/'
+function trocaLamp() {
+    if (isLampBroken()){
+        lamp.src = './img/desligada.jpg';
+        contador = 0;
+    }
 }
 
 function checkClickLimit() {
     if (contador >= clickLimit) {
         lampBroken(); // Chama a função para quebrar a lâmpada
+
     }
 }
 
 turnOn.addEventListener('click', lampOn);
 turnOff.addEventListener('click', lampOff);
+trocar.addEventListener('click', trocaLamp);
 //lamp.addEventListener('mouseover', lampOn);
 //lamp.addEventListener('mouseleave', lampOff);
 //lamp.addEventListener('dblclick', lampBroken);
