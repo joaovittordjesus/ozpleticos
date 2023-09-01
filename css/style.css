@@ -5,5 +5,41 @@ main {
     align-items: center;
 }
 button {
-    width: 80px;
+    width: 100px;
 }
+ body{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+ }
+
+ .lampada{
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    border: solid 2px #000;
+    border-radius: 10%;
+    padding: 20px;
+    background-color: #fff;
+    justify-content: center;
+    margin-top: 100px;
+ }
+
+button{
+    width: 100px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+button:hover{
+    background-color: #0056b3;
+}
+
