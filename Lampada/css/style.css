@@ -1,52 +1,67 @@
-header,
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-button {
-    width: 100px;
-}
- body{
+
+/* Estilo para o corpo (body) da página */
+body {
     display: flex;
     justify-content: center;
     height: 100vh;
     margin: 0;
     background-color: #000000;
- }
+}
 
- .lampada{
-    /*width: 400px;
-    height: 400px;
-    text-align: center;
-    border: solid 2px #000;
-    border-radius: 10%;
-    padding: 20px;
-    background-color: #fff;*/
+/* Estilo para a classe "lampada" */
+.lampada {
     justify-content: center;
     margin-top: 180px;
     position: fixed;
- }
+}
 
-button{
+/* Estilo para os botões */
+button {
     width: 100px;
     height: 40px;
     background-color: #007bff;
-    color: #fff;
+    color: #fff; 
     border: none;
     margin: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
-
+    transition: background-color 0.3s; /* Adiciona uma transição suave na mudança de cor de fundo */
 }
 
-button:hover{
-    background-color: #0056b3;
+/* Estilo para os botões quando o mouse passa sobre eles */
+button:hover {
+    background-color: #0056b3; 
 }
 
+/* Estilo para a classe "luminous" (usada para aumentar o brilho da imagem da lâmpada) */
 .luminous {
     filter: brightness(1.2); /* Aumenta o brilho da imagem em 20% */
-    transition: filter 0.3s; /* Adicione uma transição suave ao efeito */
+    transition: filter 0.3s; /* Adicione uma transição suave ao efeito de brilho */
 }
 
+/* Estilos para o cabeçalho (header) e conteúdo principal (main) */
+header, main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+/* Estilo para os botões em geral */
+button {
+    width: 100px;
+}
+
+/* Media query para ajustar o tamanho dos botões em telas menores */
+@media (max-width: 768px) {
+    button {
+        width: 80px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+/* Media query para ajustar o tamanho da lâmpada em telas menores */
+@media (max-width: 480px) {
+    .lampada-imagem {
+        width: 80px;
+    }
+}
