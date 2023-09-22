@@ -37,3 +37,28 @@ button:hover{
     border-radius: 5px;
     background-color: red;
 }
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#watch {
+    font-size: 3em;
+    padding: 10px;
+}
+
+button {
+    font-size: 1em;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    #watch {
+        font-size: 2em;
+    }
+
+    button {
+        font-size: 0.8em;
+    }
+}
