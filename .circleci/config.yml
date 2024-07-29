@@ -21,10 +21,6 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            if [ ! -f Dockerfile ]; then
-              echo "Dockerfile not found!"
-              exit 1
-            fi
             docker build -t nodejswebapp -t adijaiswal/nodejswebapp1:latest .
             echo $DOCKER_PASSWORD | docker login -u adijaiswal --password-stdin
             docker push adijaiswal/nodejswebapp1:latest
